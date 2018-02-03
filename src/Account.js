@@ -14,11 +14,7 @@ class Account {
   }
 
   getLifetimeStats(info){
-    const stats = [];
-    for(const stat of info){
-      stats.push(new Stat(stat))
-    }
-    return stats;
+    return info.map(stat => new Stat(stat));
   }
 }
 
